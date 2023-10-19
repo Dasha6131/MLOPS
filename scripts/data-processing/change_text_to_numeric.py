@@ -12,10 +12,11 @@ f_output = os.path.join("data", "stage3", "train.csv")
 os.makedirs(os.path.join("data", "stage3"), exist_ok=True)
 
 def process_data(fd_in, fd_out):
-    arr_survived = []
-    arr_pclass = []
-    arr_sex = []
     arr_age = []
+    arr_education = []
+    arr_sex = []
+    arr_hours = []
+    arr_salary = []
 
     for line in fd_in:
         line = line.rstrip('\n').split(',')
@@ -23,7 +24,7 @@ def process_data(fd_in, fd_out):
         arr_education.append(line[1])
         arr_sex.append(line[2])
         arr_hours.append(line[3])
-        arr_salary.append(line[3])
+        arr_salary.append(line[4])
 
     for i in range(len(arr_sex)):
         if arr_sex[i] == 'Male':
