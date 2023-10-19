@@ -21,7 +21,7 @@ def process_data(fd_in, fd_out):
         p_hours = line[12]
         p_salary = line[14]
 
-        fd_out.write("{},{},{},{}\n".format(p_age, p_education, p_sex, p_hourse, p_salary))
+        fd_out.write("{},{},{},{}\n".format(p_age, p_education, p_sex, p_hours, p_salary))
 
 with io.open(f_input, encoding="utf8") as fd_in:
     with io.open(f_output, "w", encoding="utf8") as fd_out:

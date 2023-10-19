@@ -38,7 +38,7 @@ def process_data(fd_in, fd_out):
         else:
             arr_salary[i] = 1
 
-    for p_age, p_education, p_sex, p_hourse, p_salary in zip(arr_age, arr_education, arr_sex, arr_hourse, arr_salary):
+    for p_age, p_education, p_sex, p_hours, p_salary in zip(arr_age, arr_education, arr_sex, arr_hours, arr_salary):
         fd_out.write("{},{},{},{}\n".format(p_survived, p_pclass, p_sex, p_age))
 
 with io.open(f_input, encoding="utf8") as fd_in:
