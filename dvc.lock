@@ -28,6 +28,12 @@ stages:
       hash: md5
       md5: a4201b8d104d376dc513a1928836408c
       size: 1254
+    outs:
+    - path: data/stage2
+      hash: md5
+      md5: 10f71764e474d9dbb28d12adf0764a16.dir
+      size: 845075
+      nfiles: 1
   text_to_numeric:
     cmd: python3 scripts/data-processing/change_text_to_numeric.py data/stage2/train.csv
     deps:
