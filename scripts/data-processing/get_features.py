@@ -15,13 +15,13 @@ def process_data(fd_in, fd_out):
     fd_in.readline()
     for line in fd_in:
         line = line.rstrip('\n').split(',')
-        p_age = line[0]
-        p_education = line[4]
-        p_sex = line[9]
-        p_hours = line[12]
-        p_salary = line[14]
+        p_age = line[1]
+        p_education = line[5]
+        p_sex = line[10]
+        p_hours = line[13]
+        p_salary = line[15]
 
-        fd_out.write("{},{},{},{}\n".format(p_age, p_education, p_sex, p_hours, p_salary))
+        fd_out.write("{},{},{},{},{}\n".format(p_age, p_education, p_sex, p_hours, p_salary))
 
 with io.open(f_input, encoding="utf8") as fd_in:
     with io.open(f_output, "w", encoding="utf8") as fd_out:

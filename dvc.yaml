@@ -1,0 +1,20 @@
+stages:
+  get-features:
+    cmd: python3 scripts/data-processing/get_features.py data/raw/train.csv
+    deps:
+    - data/raw/train.csv
+    - scripts/data-processing/get_features.py
+    outs:
+    - data/stage1
+  fill-na:
+    cmd: python3 scripts/data-processing/fill_na.py data/stage1/train.csv
+    deps:
+    - data/stage1/train.csv
+    - scripts/data-processing/fill_na.py
+  text_to_numeric:
+    cmd: python3 scripts/data-processing/change_text_to_numeric.py data/stage2/train.csv
+    deps:
+    - data/stage2/train.csv
+    - scripts/data-processing/change_text_to_numeric.py
+    outs:
+    - data/stage3

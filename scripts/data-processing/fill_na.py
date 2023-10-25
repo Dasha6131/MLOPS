@@ -36,7 +36,7 @@ def process_data(fd_in, fd_out):
             arr_age[i] = round(s / len(arr_age), 3)
 
     for p_age, p_education, p_sex, p_hours, p_salary in zip(arr_age, arr_education, arr_sex, arr_hours, arr_salary):
-        fd_out.write("{},{},{},{}\n".format(p_age, p_education, p_sex, p_hours, p_salary))
+        fd_out.write("{},{},{},{},{}\n".format(p_age, p_education, p_sex, p_hours, p_salary))
 
 
 with io.open(f_input, encoding="utf8") as fd_in:
